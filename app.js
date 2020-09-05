@@ -16,6 +16,7 @@ app.use(cors())
 app.use('/admin', require('./routes/admin'))
 app.use('/users', require('./routes/users'))
 app.use('/products', require('./routes/products'))
+app.use('/instructors', require('./routes/instructors'))
 app.use('/images', require('./routes/images'))
 app.use('/orders', require('./routes/orders'))
 
