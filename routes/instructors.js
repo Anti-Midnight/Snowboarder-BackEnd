@@ -11,3 +11,4 @@ instructorRouter.put('/:id', auth.admin, instructorController.update)
 instructorRouter.delete('/:id', auth.admin, instructorController.del)
 
 module.exports = instructorRouter
+ 

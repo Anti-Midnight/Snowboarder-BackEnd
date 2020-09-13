@@ -11,3 +11,4 @@ productRouter.put('/:id', auth.admin, productController.update)
 productRouter.delete('/:id', auth.admin, productController.del)
 
 module.exports = productRouter
+ 
