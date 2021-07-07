@@ -14,7 +14,19 @@ const instructorSchema = mongoose.Schema({
   imgURL: {
     type: String,
     required: true
-  }
+  },
+  achievement: [{
+    ach: String
+  }],
+  contact: [{
+    socialMedia: {
+      type: String,
+      enum: ['Facebook', 'Twitter', 'Instagram', 'WeChat']
+    },
+    id: String
+  }],
+  experience: [String],
+  strengths: [String] 
 })
 
 instructorSchema.pre('save', async function (next) {
