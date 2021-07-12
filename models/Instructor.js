@@ -25,7 +25,11 @@ const instructorSchema = mongoose.Schema({
     },
     id: String
   }],
-  experience: [String],
+  experience: [{
+    imgURL: String,
+    title: String,
+    detail: String
+  }],
   strengths: [String] 
 })
 
