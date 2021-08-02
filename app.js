@@ -21,7 +21,7 @@ app.use('/photos', express.static(path.join(__dirname, 'public')))
 
 app.use('/admin', require('./routes/admin'))
 app.use('/users', require('./routes/users'))
-app.use('/products', require('./routes/products'))
+app.use('/snowboards', require('./routes/snowboards'))
 app.use('/instructors', require('./routes/instructors'))
 app.use('/images', require('./routes/images'))
 app.use('/orders', require('./routes/orders'))
