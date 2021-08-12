@@ -15,25 +15,26 @@ const snowboardSchema = mongoose.Schema({
     type: mongoose.Schema.Types.Decimal128,
     required: true
   },
-  imgURL: {
+  imgURL: [{
     type: String,
     required: true
-  },
+  }],
   flex: { type: Number, min: 0, max: 10 },
   length: Number,
   camberProfile: String,
   terrain: String,
   shape: String,
   setbackStance: Number,
-  updated: { type: Date, default: Date.now }
+  updated: { type: Date, default: Date.now },
+  sellerInfo: String
 
 })
 
 snowboardSchema.pre('save', async function (next) {
-  const exist = await SnowboardModel.findOne({ name: this.name })
-  if (exist) {
-    throw new Error('Duplicate snowboard name')
-  }
+  // const exist = await SnowboardModel.findOne({ name: this.name })
+  // if (exist) {
+  //   throw new Error('Duplicate snowboard name')
+  // }
   next()
 })
 
